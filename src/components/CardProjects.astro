@@ -1,0 +1,56 @@
+---
+interface CardProps {
+	title: string;
+	date: string;
+	construction: string;
+	description: string;
+	href: string;
+}
+const { title, date, construction, description, href } = Astro.props;
+---
+
+<div
+	class="rounded-3xl overflow-hidden col-span-full lg:col-span-1"
+	style="opacity: 1; transform: none;">
+	<a
+		href={href}
+		class="group relative block py-4 lg:py-10 px-6 lg:px-14 bg-white overflow-hidden transform transition hover:scale-[1.01] h-full will-change-transform rounded-3xl hover:cursor-pointer"
+		><div class="relative max-w-screen-sm mr-4 lg:mr-8 w-full z-10">
+			<h3
+				class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+				{title}
+			</h3><div class="mt-3">{date}</div><div class="mt-4">
+				<div
+					class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
+					style="background:#f0f0f0;color:#000">
+					{construction}
+				</div>
+			</div><div class="font-light text-gf3 mt-5 pb-5">
+				{description}
+			</div>
+		</div><div
+			class="absolute top-0 bottom-0 right-0 w-[max(30em,50%)] opacity-80">
+			<svg
+				class="absolute inset-0 w-full h-full"
+				viewBox="0 0 1 1"
+				preserveAspectRatio="none"
+				><defs
+					><linearGradient
+						id="copilot-workspace"
+						x1="0"
+						y1="1"
+						x2="1"
+						y2="0"
+						><stop offset="0" stop-color="#d2e0d7"></stop><stop
+							offset="1"
+							stop-color="#d2e0d7"></stop></linearGradient
+					></defs
+				><path
+					d="M0 1 Q 0.8 0.8 1 0 L 1 1 Z"
+					fill="url(#copilot-workspace)"></path></svg
+			><div
+				class="absolute inset-0 bg-white transition duration-300 group-hover:translate-x-[120%] will-change-transform">
+			</div>
+		</div></a
+	>
+</div>

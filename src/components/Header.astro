@@ -1,0 +1,194 @@
+---
+const links = [
+	{
+		to: "/#projects",
+		label: "Proyectos",
+	},
+	{
+		to: "/#why-lot",
+		label: "Por qué Lot Arquitectos?",
+	},
+	{
+		to: "/#us",
+		label: "Nosotros",
+	},
+	{
+		to: "/#gallery",
+		label: "Galería",
+	},
+	{
+		to: "/#contact",
+		label: "Contacto",
+	},
+];
+---
+
+<script>
+	let isToggled = false;
+	const navlinks = document.querySelector("#navlinks");
+	const hamburger = document.querySelector("#hamburger");
+	const layer = document.querySelector("#navLayer");
+	const ulElement = navlinks?.querySelector("ul");
+	const links = ulElement ? [...ulElement.children] : [];
+	const btnStart = document.querySelector("#toggle_nav");
+
+	function toggleNavlinks() {
+		if (isToggled) {
+			navlinks?.classList.add(
+				"!visible",
+				"!scale-100",
+				"!opacity-100",
+				"!lg:translate-y-0"
+			);
+			hamburger?.classList.add("toggled");
+			layer?.classList.add("origin-top", "scale-y-100");
+		} else {
+			navlinks?.classList.remove(
+				"!visible",
+				"!scale-100",
+				"!opacity-100",
+				"!lg:translate-y-0"
+			);
+			hamburger?.classList.remove("toggled");
+			layer?.classList.remove("origin-top", "scale-y-100");
+		}
+	}
+	hamburger?.addEventListener("click", () => {
+		isToggled = !isToggled;
+		toggleNavlinks();
+	});
+
+	btnStart?.addEventListener("click", () => {
+		isToggled = !isToggled;
+		toggleNavlinks();
+	});
+
+	links.forEach((link) => {
+		link.addEventListener("click", () => {
+			isToggled = !isToggled;
+			toggleNavlinks();
+		});
+	});
+</script>
+
+<nav
+	class="fixed z-50 w-full max-w-7xl mx-auto px-4 md:px-12 xl:px-6 right-0 left-0">
+	<div
+		id="navbar"
+		class="relative flex flex-wrap items-center justify-between gap-6 py-3">
+		<div
+			class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo">
+			<a
+				href="/#top"
+				aria-label="logo"
+				class="flex items-center space-x-2 font-black text-xl text-white">
+				LOT Arquitectos
+			</a>
+
+			<div class="relative flex max-h-10 items-center lg:hidden">
+				<button
+					aria-label="humburger"
+					id="hamburger"
+					class="relative -mr-6 p-6">
+					<div
+						aria-hidden="true"
+						id="line"
+						class="m-auto h-0.5 w-5 rounded bg-primary transition duration-300 dark:bg-gray-300">
+					</div>
+					<div
+						aria-hidden="true"
+						id="line2"
+						class="m-auto mt-2 h-0.5 w-5 rounded bg-primary transition duration-300 dark:bg-gray-300">
+					</div>
+				</button>
+			</div>
+		</div>
+		<div
+			id="navLayer"
+			aria-hidden="true"
+			class="fixed inset-0 z-10 h-screen w-full origin-bottom scale-y-0 bg-black/50 backdrop-blur-2xl transition duration-500 lg:hidden">
+		</div>
+		<div
+			id="navlinks"
+			class="invisible my-auto absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col justify-end gap-6 rounded-3xl border border-gray-300 p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:shadow-none flex-wrap lg:visible lg:relative lg:flex lg:w-fit lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:p-0 lg:opacity-100 lg:shadow-none">
+			<div class="w-full dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0">
+				<ul
+					class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md z-20">
+					{
+						links.map((link) => (
+							<li>
+								<a
+									href={link.to}
+									class="hover:text-white text-gray-100 lg:text-white dark:text-white block transition text-md font-semibold md:px-4 tracking-tighter 	">
+									<span>{link.label}</span>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<style>
+	.logo {
+		border-radius: 1.5rem;
+	}
+	.logo img {
+		margin: 0.25rem;
+	}
+	nav {
+		animation: enhance-header linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 300px;
+	}
+	@media (width > 700px) {
+		@keyframes enhance-header {
+			to {
+				z-index: 50;
+				backdrop-filter: blur(10px);
+				margin-top: 1rem;
+				margin-inline: auto;
+				border-radius: 1rem;
+				left: 0;
+				right: 0;
+				box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1);
+				background: rgba(0, 0, 0, 0.3);
+				padding-block: 0.5rem;
+			}
+		}
+	}
+	#toggle_nav:checked ~ div #hamburger #line {
+		@apply translate-y-1.5 rotate-45;
+	}
+
+	#toggle_nav:checked ~ div #hamburger #line2 {
+		@apply -translate-y-1 -rotate-45;
+	}
+
+	.toggled div:first-child {
+		@apply translate-y-1.5 rotate-45;
+	}
+	.toggled div:last-child {
+		@apply -translate-y-1 -rotate-45;
+	}
+	@media (width < 700px) {
+		@keyframes enhance-nav {
+			to {
+				backdrop-filter: blur(20px);
+				background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, 0.4),
+					rgba(0, 0, 0, 0.2)
+				);
+				z-index: 80;
+			}
+		}
+		nav {
+			animation: enhance-nav linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 50px;
+		}
+	}
+</style>

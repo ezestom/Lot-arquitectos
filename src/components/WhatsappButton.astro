@@ -1,0 +1,40 @@
+---
+import whatsapp from "../icons/whatsappColor.svg";
+---
+
+<a
+	id="toggle_nav"
+	class="fixed max-w-10 right-5 bottom-5 z-50 hover:scale-105 transition"
+	target="_blank"
+	href="https://wa.me/+5491158541122"
+	href="/#contact">
+	<img src={whatsapp.src} alt="whatsapp logo" />
+</a>
+
+<style>
+	#btn-whatsapp:hover > span {
+		text-shadow:
+			0 0 5px #ffffff,
+			0 0 10px #ffffff,
+			0 0 20px #ffffff;
+	}
+	#btn-whatsapp {
+		animation: radius linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 100px;
+	}
+
+	#toggle_nav {
+		animation: drop linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 200px;
+	}
+	@media (width > 700px) {
+		@keyframes drop {
+			to {
+				filter: drop-shadow(0 0 3rem #000000);
+				max-width: 3rem;
+			}
+		}
+	}
+</style>

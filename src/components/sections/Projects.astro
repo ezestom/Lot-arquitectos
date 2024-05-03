@@ -1,0 +1,40 @@
+---
+import CardProjects from "../CardProjects.astro";
+import Container from "../Container.astro";
+---
+
+<Container>
+	<section class="min-h-full md:min-h-screen md:mt-20 relative">
+		<h1
+			class="text-white text-4xl lg:text-[7.5vw] font-black py-16"
+			id="projects">
+			Últimos Proyectos
+		</h1>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<CardProjects
+				title="Casa de campo"
+				construction="Residencial"
+				description="Es una casa de primer nivel, con una vista espectacular al lago de Atitlán. Cuenta con 3 habitaciones, 2 baños, sala, comedor, cocina, terraza y jardín."
+				href="/country-house"
+			/>
+			<CardProjects
+				title="Zara"
+				construction="Comercial"
+				description="Es una tienda de ropa de la marca Zara, ubicada en el centro comercial de la ciudad. Cuenta con 2 niveles, ropa para hombre, mujer y niños."
+				href="/country-house"
+			/>
+			<CardProjects
+				title="Loft "
+				construction="Residencial"
+				description="Es un loft de 2 niveles, con una vista espectacular al lago de Atitlán. Cuenta con 2 habitaciones, 2 baños, sala, comedor, cocina, terraza y jardín."
+				href="/country-house"
+			/>
+			<CardProjects
+				title="Casa de campo"
+				construction="Ocio"
+				description="Es una casa de campo, con una vista espectacular al lago de Atitlán. Cuenta con 3 habitaciones, 2 baños, sala, comedor, cocina, terraza y jardín."
+				href="/country-house"
+			/>
+		</div>
+	</section>
+</Container>

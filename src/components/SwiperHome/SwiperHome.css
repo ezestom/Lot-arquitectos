@@ -1,0 +1,18 @@
+@media (width > 1000px) {
+	@keyframes fade-away {
+		to {
+			opacity: 0;
+			scale: 0.8;
+			border-radius: 100%;
+		}
+	}
+	.mySwiper {
+		view-timeline: --scroll;
+	}
+
+	.mySwiper {
+		animation: fade-away both linear;
+		animation-timeline: --scroll;
+		animation-range: exit 10% exit 90%;
+	}
+}

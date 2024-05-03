@@ -1,0 +1,201 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+import { SimpleGallery } from "../components/SimpleGallery/SimpleGallery.jsx";
+
+const images = [
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
+		width: 1875,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
+		width: 1669,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
+		width: 2500,
+		height: 1666,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
+		width: 1875,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
+		width: 1669,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
+		width: 2500,
+		height: 1666,
+	},
+];
+---
+
+<Layout title="Casa de campo">
+	<Container>
+		<header class="flex items-center justify-between py-16">
+			<h1
+				class="text-white text-4xl lg:text-[8vw] font-black"
+				id="projects">
+				Casa de Campo
+			</h1>
+			<a
+				class="cursor-pointer duration-200 hover:scale-110 active:scale-100 border-8 flex items-center justify-center h-full border-white p-2 rounded-full"
+				title="Go Back"
+				href="/#projects">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="5vw"
+					height="auto"
+					viewBox="0 0 24 24"
+					class="stroke-white">
+					<path
+						stroke-linejoin="round"
+						stroke-linecap="round"
+						stroke-width="3"
+						d="M11 6L5 12M5 12L11 18M5 12H19"></path>
+				</svg>
+			</a>
+		</header>
+		<section
+			class="flex items-start justify-between h-full gap-5 mb-10 text-xl">
+			<article class="flex items-start flex-col max-w-[50%] gap-2">
+				<h2
+					class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-2xl font-semibold shadow-md"
+					style="background:#d2e0d7;color:#000"
+					>
+					Construida en el barrio las palomas
+				</h2>
+				<p>
+					Esta es la casa de campo de mis sueños, construida en el
+					barrio las palomas, con una vista espectacular a la montaña,
+					rodeada de naturaleza y aire puro. La casa cuenta con 3
+					habitaciones, 2 baños, cocina, sala, comedor, piscina y un
+					amplio jardín. Es el lugar perfecto para relajarse y
+					disfrutar de la vida.
+				</p>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000">Ubicación:</strong
+					> Barrio las palomas, Cali, Colombia
+				</span>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000">Área:</strong
+					> 200 m2
+				</span>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000">Precio:</strong
+					> $500,000,000
+				</span>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000">Estado:</strong
+					> Disponible
+				</span>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000"
+						>Fecha de construcción:</strong
+					> 2021
+				</span>
+				<span>
+					<strong
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold shadow-md"
+						style="background:#d2e0d7;color:#000"
+						>Características:</strong
+					>
+					<ul>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ 3 habitaciones
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ 2 baños
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ Cocina
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ Sala
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ Comedor
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ Piscina
+						</li>
+						<li
+							class="text-gh3 pt-4 pb-1 font-[800] tracking-tight bg-clip-text">
+							✦ Jardín
+						</li>
+					</ul>
+				</span>
+			</article>
+
+			<aside>
+				<SimpleGallery
+					client:load
+					galleryID="myGallery"
+					images={images}
+				/>
+			</aside>
+			<div class="fixed top-0 rotate-180 right-0 w-full h-1/2 -z-10">
+				<svg
+					class="inset-0 w-full h-full"
+					viewBox="0 0 1 1"
+					preserveAspectRatio="none"
+					><defs
+						><linearGradient
+							id="copilot-workspace"
+							x1="0"
+							y1="1"
+							x2="1"
+							y2="0"
+							><stop offset="0" stop-color="#d2e0d7"></stop><stop
+								offset="1"
+								stop-color="#d2e0d7"></stop></linearGradient
+						></defs
+					><path
+						d="M0 1 Q 0.8 0.8 1 0 L 1 1 Z"
+						fill="url(#copilot-workspace)"></path></svg
+				>
+			</div>
+		</section>
+	</Container>
+</Layout>
