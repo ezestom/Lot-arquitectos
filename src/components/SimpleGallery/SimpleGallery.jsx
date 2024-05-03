@@ -19,7 +19,7 @@ export function SimpleGallery(props) {
 
 	return (
 		<div
-			className="pswp-gallery w-full h-full grid grid-cols-1 md:grid-cols-2 gap-4"
+			className="pswp-gallery w-full h-full grid grid-cols-2  gap-1 md:gap-4"
 			id={props.galleryID}>
 			{props.images.map((image, index) => (
 				<a
@@ -34,7 +34,7 @@ export function SimpleGallery(props) {
 					<img
 						src={image.thumbnailURL}
 						alt=""
-						className="rounded-xl aspect-square w-[250px] object-cover object-center hover:scale-105 transition-transform duration-300 ease-in-out"
+						className="rounded-xl aspect-square w-full md:w-[250px] object-cover object-center hover:scale-105 transition-transform duration-300 ease-in-out"
 					/>
 				</a>
 			))}

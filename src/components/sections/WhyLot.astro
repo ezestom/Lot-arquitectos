@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+
+---
+
+<Layout title="¿Por qué Lot Arquitectos?">
+	<Container>
+		<section class="min-h-screen flex flex-col items-center justify-center">
+			<h1
+				class="text-white text-center text-4xl lg:text-[5.5vw] font-black py-16 drop-shadow-md"
+				id="why-lot">
+				¿Por qué Lot Arquitectos?
+			</h1>
+			<div
+				class="flex flex-col bg-[#d2e0d7]/30 backdrop-blur text-white rounded-xl p-6 md:p-20 mx-4 md:mx-60">
+				<hr />
+
+				<p
+					class="font-semibold text-base lg:text-[1.5vw] drop-shadow-md leading-normal">
+					Somos un equipo de arquitectos jóvenes con una visión
+					innovadora y una sólida experiencia en la creación de
+					hogares de última generación. Nos comprometemos a brindar
+					soluciones integrales y personalizadas, fusionando
+					creatividad y funcionalidad en cada proyecto. Desde el
+					diseño hasta la construcción, trabajamos estrechamente con
+					nuestros clientes para convertir sus ideas en espacios
+					habitables que reflejen su estilo de vida.
+				</p>
+				<hr />
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<!-- <SmoothPicture image={image1} text="arquitectos jóvenes" />
+</span> -->
+
+<style>
+	section {
+		background-image: url("../../img/home-4.jpg");
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 4rem 0;
+	}
+	hr {
+		/* create a amazin gr gradiente */
+		border: 0;
+		height: .25rem;
+		background-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 1),
+			rgba(255, 255, 255, 0)
+		);
+		width: 100%;
+		margin-block: 2rem;
+	}
+</style>

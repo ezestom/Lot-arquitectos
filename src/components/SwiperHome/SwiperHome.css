@@ -13,6 +13,6 @@
 	.mySwiper {
 		animation: fade-away both linear;
 		animation-timeline: --scroll;
-		animation-range: exit 10% exit 90%;
+		animation-range: exit 35% exit 90%;
 	}
 }

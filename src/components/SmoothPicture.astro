@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+interface CategoryItem {
+	image: any;
+	text: string;
+}
+const { image, text } = Astro.props;
+---
+
+<span class="category-item list-none w-fit" data-reveal>
+	<div class="category-card relative">
+		<p class="card-title text-black/75 font-semibold text-[1.5vw]">
+			{text}
+		</p>
+
+		<figure class="card-banner img-holder">
+			<Image
+				src={image}
+				alt="Wedding"
+				class="w-full- h-full object-cover rounded-xl img-cover"
+			/>
+		</figure>
+	</div>
+</span>
+
+<style>
+	.category-card .card-banner {
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translate(-50%, -20px);
+		width: 200px;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.category-card:is(:hover, :focus-visible) .card-banner {
+		transform: translate(-50%, 0);
+		visibility: visible;
+		opacity: 1;
+		border-radius: 1rem;
+		color: #d2e0d7;
+	}
+</style>

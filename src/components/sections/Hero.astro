@@ -2,14 +2,10 @@
 import Header from "../../components/Header.astro";
 import SocialLinks from "../SocialLinks.astro";
 import { SwiperHome } from "../SwiperHome/SwiperHome.jsx";
-import Projects from "./Projects.astro";
 ---
 
-<section>
-	<header>
-		<Header />
-		<SwiperHome client:load />
-		<SocialLinks />
-	</header>
-	<Projects />
-</section>
+<header>
+	<Header />
+	<SwiperHome client:load />
+	<SocialLinks />
+</header>
