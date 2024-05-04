@@ -1,0 +1,60 @@
+video {
+	animation: spinner 8s linear infinite;
+}
+@keyframes spinner {
+	25% {
+		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.5));
+	}
+	50% {
+		filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.5));
+	}
+	5% {
+		filter: drop-shadow(0 0 4rem rgba(255, 255, 255, 0.5));
+	}
+	100% {
+		filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+	}
+}
+
+figure:hover {
+	cursor: crosshair;
+}
+
+.youtube,
+.close-button {
+	transition: all 0.3s ease-in-out;
+	margin: auto;
+	position: absolute;
+	width: 3em;
+	z-index: 20;
+	filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.close-button {
+	width: 3em;
+}
+.youtube:hover,
+.close-button:hover {
+	transform: scale(1.05) translate(0, -2px);
+}
+
+.app-video:hover {
+	cursor: crosshair;
+}
+.hr {
+	inset: 0;
+	margin: auto;
+	height: 1px;
+	width: 26ch;
+	border: none;
+	background: linear-gradient(
+		to right,
+		transparent 0%,
+		#09f 50%,
+		transparent 100%
+	);
+}
+@media (width < 768px) {
+	.app-video {
+		width: 100%;
+	}
+}

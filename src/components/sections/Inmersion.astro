@@ -1,0 +1,22 @@
+---
+import Fader from "../Fader.astro";
+import { BlurVideo } from "../../components/BlurVideo/BlurVideo";
+import img from "../../img/plan.jpg";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Inmersión en Lot Arquitectos">
+	<section
+		class="h-screen text-center relative overflow-hidden"
+		data-header-color="black"
+		id="inmersion">
+		<BlurVideo client:visible />
+		<!-- <Fader /> -->
+		<Image
+			class="absolute w-full h-full md:h-screen object-cover  -z-1 opacity-10"
+			src={img}
+			alt="Image of drone"
+		/>
+	</section>
+</Layout>
