@@ -2,8 +2,6 @@
 	@keyframes fade-away {
 		to {
 			opacity: 0;
-			scale: 0.8;
-			border-radius: 100%;
 		}
 	}
 	.mySwiper {
@@ -13,6 +11,6 @@
 	.mySwiper {
 		animation: fade-away both linear;
 		animation-timeline: --scroll;
-		animation-range: exit 35% exit 90%;
+		animation-range: exit 25% exit 75%;
 	}
 }

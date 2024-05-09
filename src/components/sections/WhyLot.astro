@@ -5,29 +5,33 @@ import Container from "../../components/Container.astro";
 
 <Layout title="¿Por qué Lot Arquitectos?">
 	<Container>
-		<section class="min-h-screen h-full flex flex-col items-center justify-center">
-			<h1
-				class="text-white text-center text-4xl lg:text-[5.5vw] font-black py-16 drop-shadow-md"
-				id="why-lot">
-				¿Por qué Lot Arquitectos?
-			</h1>
-			<div
-				class="flex flex-col bg-[#d2e0d7]/30 backdrop-blur text-white rounded-xl p-3 md:p-16 mx-4 md:mx-60">
-				<hr />
+		<section
+			class=" flex flex-col items-center justify-center relative">
+			<article class="w-full mt-20 md:py-20">
+				<h1
+					class="text-white text-center text-4xl lg:text-[5.5vw] font-black py-20 drop-shadow-md"
+					id="why-lot">
+					¿Por qué Lot Arquitectos?
+				</h1>
+			</article>
 
+			<hr />
+			<div class="text-black p-7 md:p-20 bg-white rounded-3xl">
 				<p
-					class="font-semibold text-base lg:text-[1.5vw] drop-shadow-md leading-normal">
-					Somos un equipo de arquitectos jóvenes con una visión
-					innovadora y una sólida experiencia en la creación de
-					hogares de última generación. Nos comprometemos a brindar
-					soluciones integrales y personalizadas, fusionando
-					creatividad y funcionalidad en cada proyecto. Desde el
-					diseño hasta la construcción, trabajamos estrechamente con
-					nuestros clientes para convertir sus ideas en espacios
-					habitables que reflejen su estilo de vida.
+					class="font-light text-start text-pretty text-base lg:text-xl">
+					Somos un equipo de <strong>jóvenes arquitectos </strong>con
+					una visión innovadora y una sólida experiencia en la
+					creación de hogares de última generación. Nos comprometemos
+					a brindar <strong
+						>soluciones integrales y personalizadas</strong
+					>, fusionando creatividad y funcionalidad en cada proyecto.
+					Desde el <strong>diseño hasta la construcción</strong>,
+					trabajamos estrechamente con nuestros clientes para
+					convertir sus ideas en espacios habitables que reflejen su
+					<strong>estilo de vida.</strong>
 				</p>
-				<hr />
 			</div>
+			<hr />
 		</section>
 	</Container>
 </Layout>
@@ -36,7 +40,8 @@ import Container from "../../components/Container.astro";
 </span> -->
 
 <style>
-	section {
+	article {
+		position: relative;
 		background-image: url("../../img/home-4.jpg");
 		background-size: cover;
 		background-position: center;
@@ -44,8 +49,6 @@ import Container from "../../components/Container.astro";
 		border-radius: 1rem;
 		top: 0;
 		left: 0;
-		margin: 5rem 0;
-		padding: 5rem 0;
 	}
 	hr {
 		/* create a amazin gr gradiente */
@@ -59,5 +62,8 @@ import Container from "../../components/Container.astro";
 		);
 		width: 100%;
 		margin-block: 2rem;
+	}
+	strong {
+		font-weight: 700;
 	}
 </style>
