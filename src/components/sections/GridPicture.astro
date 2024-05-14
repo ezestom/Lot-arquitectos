@@ -10,6 +10,7 @@ import grid_7 from "../../img/grid_7.jpg";
 import grid_8 from "../../img/grid_8.jpg";
 import grid_9 from "../../img/grid_9.jpg";
 import { GridSwiper } from "../GridSwiper/GridSwiper.jsx";
+import Container from "../Container.astro";
 
 const images = [
 	{
@@ -63,6 +64,8 @@ const images = [
 ];
 ---
 
-<article class="h-full md:min-h-screen flex justify-start items-center my-20">
-	<GridSwiper client:load galleryID="myGallery" images={images} />
-</article>
+<Container>
+	<article class="h-full md:min-h-screen flex justify-start items-center">
+		<GridSwiper client:load galleryID="myGallery" images={images} />
+	</article>
+</Container>

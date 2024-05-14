@@ -19,7 +19,7 @@ export function GridSwiper(props) {
 
 	return (
 		<div
-			className="pswp-gallery w-full h-full grid grid-cols-2 md:grid-cols-4 gap-1"
+			className="pswp-gallery w-full h-full grid grid-cols-2 md:grid-cols-4 gap-4"
 			id={props.galleryID}>
 			{props.images.map((image, index) => (
 				<a
