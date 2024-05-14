@@ -9,12 +9,12 @@ export function BlurVideo() {
 	const openDialog = () => {
 		setIsOpen(true);
 		// stop scroll
-		document.body.style.overflow = "hidden";
+		// document.body.style.overflow = "hidden";
 	};
 	const closeDialog = () => {
 		setIsOpen(false);
 		// enable scroll
-		document.body.style.overflow = "auto";
+		// document.body.style.overflow = "auto";
 	};
 
 	return (
@@ -33,7 +33,7 @@ export function BlurVideo() {
 				/>
 			</button>
 			{isOpen && (
-				<dialog open className=" z-50 relative ">
+				<dialog open className=" ">
 					<iframe
 						className="fixed w-full h-full p-1 rounded-3xl shadow-2xl object-cover top-0 bottom-0 left-0"
 						src="https://www.youtube.com/embed/fv2hsVDW-fU?si=pAw1x73-DRnvHlCO&autoplay=1"

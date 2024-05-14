@@ -1,0 +1,39 @@
+---
+import CardSpotlight from "../CardSpotlight.jsx";
+import Container from "../Container.astro";
+---
+
+<Container>
+	<article
+		class="min-h-screen flex flex-col justify-center text-white mb-20 relative"
+		id="steps">
+		<h2
+			class="text-white text-center text-4xl lg:text-[6vw] font-black py-16 drop-shadow-md"
+			id="your-project">
+			Construyamos tu proyecto
+		</h2>
+		<div class="grid grid-col-1 md:grid-cols-3 my-20 gap-5">
+			<CardSpotlight
+				header="¡Te escuchamos!"
+				main="Lo primero que vamos a hacer es escucharte para entender que necesidades tenes y como te gustaría vivir para poder sorprenderte con ideas que vayan con vos y tu familia, con tu vida familiar en casa."
+				number="1"
+				img={""}
+				client:visible
+			/>
+			<CardSpotlight
+				header="¡Visualizamos!"
+				main="A partir de ahora es el momento de que sueñes y traigas todas las ideas que tengas en tu mente, así las combinamos con las nuestras y juntos construimos el diseño de tu casa."
+				number="2"
+				img={""}
+				client:visible
+			/>
+			<CardSpotlight
+				header="¡Comenzamos!"
+				main="Ahora que ya tenes todos los permisos podemos construir la casa de tus hijos y nos vamos a encargar de absolutamente todo para que puedan disfrutar en familia viendo cómo se construye tu casa."
+				number="3"
+				img={""}
+				client:visible
+			/>
+		</div>
+	</article>
+</Container>

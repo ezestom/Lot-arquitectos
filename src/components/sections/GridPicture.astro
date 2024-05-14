@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import grid_1 from "../../img/grid_1.jpg";
+import grid_2 from "../../img/grid_2.jpg";
+import grid_3 from "../../img/grid_3.jpg";
+import grid_4 from "../../img/grid_4.jpg";
+import grid_5 from "../../img/grid_5.jpg";
+import grid_6 from "../../img/grid_6.jpg";
+import grid_7 from "../../img/grid_7.jpg";
+import grid_8 from "../../img/grid_8.jpg";
+import grid_9 from "../../img/grid_9.jpg";
+import { GridSwiper } from "../GridSwiper/GridSwiper.jsx";
+
+const images = [
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
+		width: 1875,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
+		width: 1669,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
+		width: 2500,
+		height: 1666,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
+		width: 1875,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
+		width: 1669,
+		height: 2500,
+	},
+	{
+		largeURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+		thumbnailURL:
+			"https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
+		width: 2500,
+		height: 1666,
+	},
+];
+---
+
+<article class="h-full md:min-h-screen flex justify-start items-center my-20">
+	<GridSwiper client:load galleryID="myGallery" images={images} />
+</article>
