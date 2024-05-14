@@ -1,0 +1,151 @@
+---
+import { BlurVideo } from "../BlurVideo/BlurVideo.jsx";
+import { Image } from "astro:assets";
+import grid_1 from "../../img/grid_1.jpg";
+import grid_2 from "../../img/grid_2.jpg";
+import grid_3 from "../../img/grid_3.jpg";
+import grid_4 from "../../img/grid_4.jpg";
+import grid_5 from "../../img/grid_5.jpg";
+import grid_6 from "../../img/grid_6.jpg";
+import grid_7 from "../../img/grid_7.jpg";
+import grid_8 from "../../img/grid_8.jpg";
+import grid_9 from "../../img/grid_9.jpg";
+---
+
+<article class="gallery my-20">
+	<div class="gallery-track">
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_1} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_2} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_3} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_4} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<BlurVideo client:visible />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_6} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_7} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_8} />
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<Image alt="picture" src={grid_9} />
+			</div>
+		</div>
+	</div>
+</article>
+
+<script>
+	const gallery = document.querySelector(".gallery");
+	const track = document.querySelector(".gallery-track");
+	const cards = document.querySelectorAll(".card");
+	const easing = 0.05;
+	let startY = 0;
+	let endY = 0;
+	let raf;
+
+	const lerp = (start, end, t) => start * (1 - t) + end * t;
+
+	function updateScroll() {
+		startY = lerp(startY, endY, easing);
+		gallery.style.height = `${track.clientHeight}px`;
+		track.style.transform = `translateY(-${startY}px)`;
+		activateParallax();
+		raf = requestAnimationFrame(updateScroll);
+		if (startY.toFixed(1) === window.scrollY.toFixed(1))
+			cancelAnimationFrame(raf);
+	}
+
+	function startScroll() {
+		endY = window.scrollY;
+		cancelAnimationFrame(raf);
+		raf = requestAnimationFrame(updateScroll);
+	}
+
+	function parallax(card) {
+		const wrapper = card.querySelector(".card-image-wrapper");
+		const diff = card.offsetHeight - wrapper.offsetHeight;
+		const { top } = card.getBoundingClientRect();
+		const progress = top / window.innerHeight;
+		const yPos = diff * progress;
+		wrapper.style.transform = `translateY(${yPos}px)`;
+	}
+
+	const activateParallax = () => cards.forEach(parallax);
+
+	function init() {
+		activateParallax();
+		startScroll();
+	}
+
+	window.addEventListener("load", updateScroll, false);
+	window.addEventListener("scroll", init, false);
+	window.addEventListener("resize", updateScroll, false);
+</script>
+
+<style>
+	.gallery-track {
+		position: fixed;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.25rem;
+		padding: 0.25rem;
+		will-change: transform;
+	}
+
+	.card {
+		height: 400px;
+		overflow: hidden;
+		border-radius: 1.5rem;
+
+		& .card-image-wrapper {
+			height: 135%;
+			will-change: transform;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	@media (width < 800px) {
+		.gallery-track {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (width < 550px) {
+		.gallery-track {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+</style>

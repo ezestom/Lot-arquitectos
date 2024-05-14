@@ -18,24 +18,24 @@ export function BlurVideo() {
 	};
 
 	return (
-		<article className="w-full h-full">
-			<button onClick={openDialog} className="relative">
+		<article className="relative">
+			<button onClick={openDialog} className="">
 				<video
-					className=" rounded-3xl  app-video cursor-crosshair"
+					className=" rounded-3xl min-h-[600px] h-full w-full  object-cover cursor-crosshair"
 					src={video}
 					loop
 					muted
 					autoPlay></video>
 				<img
 					src={youtube.src}
-					className="absolute w-12 youtube top-0 bottom-0 left-0 right-0 m-auto hover:scale-105 transition"
+					className="absolute w-16 youtube -top-20 bottom-0 left-0 right-0 m-auto hover:scale-105 transition"
 					alt="logo youtube"
 				/>
 			</button>
 			{isOpen && (
 				<dialog open className=" z-50 relative ">
 					<iframe
-						className="fixed -translate-x-[25%] w-full md:min-w-[850px] p-1 aspect-video rounded-3xl shadow-2xl  top-0 bottom-0 left-0"
+						className="fixed w-full h-full p-1 rounded-3xl shadow-2xl object-cover top-0 bottom-0 left-0"
 						src="https://www.youtube.com/embed/fv2hsVDW-fU?si=pAw1x73-DRnvHlCO&autoplay=1"
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

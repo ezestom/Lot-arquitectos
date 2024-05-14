@@ -57,9 +57,9 @@ export function SwiperHome() {
 				el: ".swiper-pagination",
 			}}
 			modules={[FreeMode, Pagination]}
-			className="mySwiper ">
+			className="mySwiper rounded-b-3xl ">
 			{images.map((image, index) => (
-				<SwiperSlide key={index} className=" rounded-3xl">
+				<SwiperSlide key={index} className="">
 					<div className="home relative hover:cursor-grab  ">
 						<aside className="absolute  mx-auto z-20 h-full w-full flex items-end md:items-center justify-center md:justify-between  opacity-20 ">
 							<img
