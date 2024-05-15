@@ -19,7 +19,7 @@ export function GridSwiper(props) {
 
 	return (
 		<div
-			className="pswp-gallery w-full h-full grid grid-cols-2 md:grid-cols-4 gap-4"
+			className="pswp-gallery w-full h-full grid grid-cols-2 md:grid-cols-4 gap-4 "
 			id={props.galleryID}>
 			{props.images.map((image, index) => (
 				<a
@@ -30,11 +30,11 @@ export function GridSwiper(props) {
 					key={props.galleryID + "-" + index}
 					target="_blank"
 					rel="noreferrer"
-					className="object-cover aspect-square">
+					className="object-cover aspect-square hover:scale-105 transition-transform duration-300 ease-in-out">
 					<img
 						src={image.thumbnailURL}
 						alt=""
-						className="rounded-xl w-full h-full max-h-[500px] object-cover object-center transition-transform duration-300 ease-in-out"
+						className="rounded-3xl w-full h-full max-h-[500px] object-cover object-center transition-transform duration-300 ease-in-out"
 					/>
 				</a>
 			))}

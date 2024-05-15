@@ -59,7 +59,7 @@ const CardSpotlight = ({ header, main, number, img }) => {
 					className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
 					style={{
 						opacity,
-						background: `radial-gradient(150px circle at ${position.x}px ${position.y}px, #d2e0d7 , transparent 50%)`,
+						background: `radial-gradient(150px circle at ${position.x}px ${position.y}px, rgba(210,224,215,0.5) , transparent 75%)`,
 					}}
 				/>
 				<article className="h-full w-full flex flex-col justify-between py-12">

@@ -34,7 +34,7 @@ export function SimpleGallery(props) {
 					<img
 						src={image.thumbnailURL}
 						alt=""
-						className="rounded-xl aspect-square w-full md:w-[250px] object-cover object-center hover:scale-105 transition-transform duration-300 ease-in-out"
+						className="rounded-3xl aspect-square w-full md:w-[250px] object-cover object-center hover:scale-105 transition-transform duration-300 ease-in-out"
 					/>
 				</a>
 			))}
