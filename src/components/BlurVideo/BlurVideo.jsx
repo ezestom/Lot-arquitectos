@@ -21,14 +21,14 @@ export function BlurVideo() {
 		<article className="relative">
 			<button onClick={openDialog} className="">
 				<video
-					className=" rounded-3xl min-h-[600px] h-full w-full  object-cover cursor-crosshair"
+					className=" rounded-3xl min-h-[200px] h-full w-full  object-cover cursor-crosshair"
 					src={video}
 					loop
 					muted
 					autoPlay></video>
 				<img
 					src={youtube.src}
-					className="absolute w-16 youtube -top-20 bottom-0 left-0 right-0 m-auto hover:scale-105 transition"
+					className="absolute w-16 youtube top-0 bottom-0 left-0 right-0 m-auto hover:scale-105 transition"
 					alt="logo youtube"
 				/>
 			</button>
@@ -42,12 +42,12 @@ export function BlurVideo() {
 						allowFullScreen></iframe>
 
 					<button
-						className=" fixed -top-12 w-12 mx-auto z-50"
+						className=" fixed -top-16 left-0 right-0 z-50"
 						onClick={closeDialog}>
 						<img
 							src={close.src}
 							alt="close button"
-							className="close-button"
+							className="close-button mx-auto"
 						/>
 					</button>
 				</dialog>

@@ -1,0 +1,97 @@
+---
+import { Form } from "../Form/Form.jsx";
+import Container from "../Container.astro";
+import { Image } from "astro:assets";
+import img from "../../img/plan.jpg";
+import team from "../../img/team.webp";
+---
+
+<section id="contact">
+	<Container>
+		<h1
+			class="text-white text-center text-4xl lg:text-[6vw] font-black py-20 drop-shadow-md"
+			id="why-lot">
+			Contacta con Nosotros
+		</h1>
+		<div
+			class="flex flex-col md:flex-row items-center justify-between bg-black/10 backdrop-blur-sm rounded-3xl p-10 gap-4 md:p-20">
+			<article class="w-full flex flex-col md:w-1/2">
+				<h2
+					class="text-2xl font-bold text-gray-900 md:text-4xl dark:text-white">
+					No dejes de contactar con nosotros
+				</h2>
+				<p class="my-2 text-gray-600 dark:text-gray-300 font-semibold">
+					Estamos aquí para ayudarte en lo que necesites y para que tu
+					contrucción sea lo más sencilla posible.
+				</p>
+
+				<div
+					class="divide-y space-y-4 w-3/4 divide-gray-100 pb-10 md:pb-0">
+					<div class="mt-8 flex gap-4 text-sm md:items-center">
+						<div
+							class="flex items-center justify-center text-green-600">
+							✓
+						</div>
+						<div class="w-5/6">
+							<p class="text-gray-500 dark:text-gray-400">
+								Calle de la Arquitectura, 123
+							</p>
+						</div>
+					</div>
+					<div class="pt-4 flex gap-4 text-sm md:items-center">
+						<div
+							class="flex items-center justify-center text-green-600">
+							✓
+						</div>
+
+						<div class="w-5/6">
+							<p class="text-gray-500 dark:text-gray-400">
+								28000 Madrid
+							</p>
+						</div>
+					</div>
+					<div class="pt-4 flex gap-4 text-sm md:items-center">
+						<div
+							class="flex items-center justify-center text-green-600">
+							✓
+						</div>
+
+						<div class="w-5/6">
+							<a
+								class="text-gray-500 dark:text-gray-400"
+								href="#"
+								target="_blank">
+								+34 123 456 789
+							</a>
+						</div>
+					</div>
+					<div class="pt-4 flex gap-4 text-sm md:items-center">
+						<div
+							class="flex items-center justify-center text-green-600">
+							✓
+						</div>
+
+						<div class="w-5/6">
+							<a
+								class="text-gray-500 dark:text-gray-400"
+								href="#"
+								target="_blank">
+								info@lotarquitectos.com
+							</a>
+						</div>
+					</div>
+				</div>
+			</article>
+			<Image
+				class="w-full rounded-3xl md:w-1/2"
+				src={team}
+				alt="Image of a house"
+			/>
+		</div>
+		<Image
+			class="top-0 left-0 h-full w-full object-cover -z-10 opacity-5 absolute rotate-180"
+			src={img}
+			alt="Image of a house in the woods"
+		/>
+	</Container>
+</section>

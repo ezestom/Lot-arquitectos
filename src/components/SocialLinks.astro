@@ -6,51 +6,49 @@ import youtube from "../icons/youtube.svg";
 import WhatsappButton from "./WhatsappButton.astro";
 ---
 
-<div class="home-content fixed left-5 bottom-12 md:bottom-5 z-10">
-	<nav class="home-social h-full flex flex-col gap-4 ">
-		<a href="#" target="_blank" class="home-social-link ">
-			<img src={instagram.src} alt={`${instagram}link`} class="size-6" />
+<div class="home-content fixed left-2 bottom-12 md:bottom-2 z-10">
+	<nav class="home-social h-full flex flex-col gap-1">
+		<a href="#" target="_blank" class="home-social-link">
+			<img
+				src={instagram.src}
+				alt={`${instagram}link`}
+				class="size-6 opacity-75"
+			/>
 		</a>
 		<a href="#" target="_blank" class="home-social-link">
-			<img src={twitter.src} alt={`${twitter} link`} class="size-6" />
+			<img
+				src={twitter.src}
+				alt={`${twitter} link`}
+				class="size-6 opacity-75"
+			/>
 		</a>
 		<a href="#" target="_blank" class="home-social-link">
-			<img src={linkedin.src} alt={`${linkedin} link`} class="size-6" />
+			<img
+				src={linkedin.src}
+				alt={`${linkedin} link`}
+				class="size-6 opacity-75"
+			/>
 		</a>
 		<a href="#" target="_blank" class="home-social-link">
-			<img src={youtube.src} alt={`${youtube} link`} class="size-6" />
+			<img
+				src={youtube.src}
+				alt={`${youtube} link`}
+				class="size-6 opacity-75"
+			/>
 		</a>
 	</nav>
 	<WhatsappButton />
 </div>
 
 <style>
-	.home-content {
-		animation: separation linear both;
-		animation-timeline: scroll(root);
-		animation-range: 0 150px;
+	.home-social-link {
+		background-color: rgba(255, 255, 255, 0.3);
+		padding: 5px;
+		border-radius: 100%;
 	}
-	.home-social {
-		animation: direction linear both;
-		animation-timeline: scroll(root);
-		animation-range: 0 300px;
+	.home-social-link:hover {
+		background-color: rgba(255, 255, 255, 0.5);
+		transform: scale(1.05);
+		transition: all 0.3s ease-in-out;
 	}
-
-		@keyframes direction {
-			to {
-				gap: 0.75rem;
-			}
-		}
-		@keyframes separation {
-			to {
-				padding: 0.5rem 0.25rem;
-				border-radius: .5rem;
-			}
-		}
-		@media(width < 768px) {
-			.home-content {
-				left: 0;
-				bottom: 0;
-			}
-		}
 </style>
