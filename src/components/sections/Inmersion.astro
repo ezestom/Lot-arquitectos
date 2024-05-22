@@ -29,9 +29,9 @@ const { title1, date1, construction1, description1 } = HOME1;
 			Nuestros proyectos
 		</h3>
 		<div
-			class="flex flex-col md:flex-row justify-evenly items-center gap-10 md:gap-0 my-10 md:my-0 flex-wrap">
+			class="grid md:grid-cols-3 gap-4 my-10 md:my-0 flex-wrap pt-20">
 			<article
-				class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm">
+				class="flex flex-col items-start justify-start text-start bg-black/10 w-full  p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm">
 				<Image
 					src={photo1}
 					alt="house picture"
@@ -52,7 +52,7 @@ const { title1, date1, construction1, description1 } = HOME1;
 			</article>
 
 			<article
-				class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[10rem]">
+				class="flex flex-col items-start justify-start text-start bg-black/10 w-full  p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[10rem]">
 				<BlurVideo client:visible />
 				<h3
 					class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
@@ -69,7 +69,7 @@ const { title1, date1, construction1, description1 } = HOME1;
 			</article>
 
 			<article
-				class="-z-10 flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[20rem]">
+				class="-z-10 flex flex-col items-start justify-start text-start bg-black/10 w-full  p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[20rem]">
 				<Image
 					src={photo2}
 					alt="house picture"
