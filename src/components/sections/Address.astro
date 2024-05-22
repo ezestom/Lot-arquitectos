@@ -6,13 +6,13 @@ import img from "../../img/plan.jpg";
 import team from "../../img/team.webp";
 ---
 
-<section id="contact">
-	<Container>
-		<h1
-			class="text-white text-center text-4xl lg:text-[6vw] font-black py-20 drop-shadow-md"
-			id="why-lot">
-			Contacta con Nosotros
-		</h1>
+<Container>
+	<h1
+		class="text-white text-center text-4xl lg:text-[5vw] font-black py-20 drop-shadow-md"
+		id="why-lot">
+		Contacta con Nosotros
+	</h1>
+	<section id="contact">
 		<div
 			class="flex flex-col md:flex-row items-center justify-between bg-black/10 backdrop-blur-sm rounded-3xl p-10 gap-4 md:p-20">
 			<article class="w-full flex flex-col md:w-1/2">
@@ -33,9 +33,12 @@ import team from "../../img/team.webp";
 							✓
 						</div>
 						<div class="w-5/6">
-							<p class="text-gray-500 dark:text-gray-400">
+							<a
+								class="text-gray-500 dark:text-gray-400"
+								href="https://maps.app.goo.gl/hRfGvahuXarSQURk9"
+								target="_blank">
 								Calle de la Arquitectura, 123
-							</p>
+							</a>
 						</div>
 					</div>
 					<div class="pt-4 flex gap-4 text-sm md:items-center">
@@ -45,9 +48,12 @@ import team from "../../img/team.webp";
 						</div>
 
 						<div class="w-5/6">
-							<p class="text-gray-500 dark:text-gray-400">
-								28000 Madrid
-							</p>
+							<a
+								class="text-gray-500 dark:text-gray-400"
+								href="https://www.instagram.com/lotarquitectos/"
+								target="_blank">
+								@lotarquitectos en Instagram
+							</a>
 						</div>
 					</div>
 					<div class="pt-4 flex gap-4 text-sm md:items-center">
@@ -93,5 +99,20 @@ import team from "../../img/team.webp";
 			src={img}
 			alt="Image of a house in the woods"
 		/>
-	</Container>
-</section>
+	</section>
+</Container>
+
+<style>
+	section {
+		animation: reveal2 linear both;
+		animation-timeline: view();
+		animation-range: entry 10% cover 30%;
+	}
+	@keyframes reveal2 {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+			scale: 0.8;
+		}
+	}
+</style>

@@ -80,10 +80,10 @@ const CardSpotlight = ({ header, main, number, img }) => {
 								className="max-w-10 opacity-25"
 							/>
 						</button>
-						<header className=" text-xl md:text-xl font-bold text-white bg-black/50 rounded-xl py-2 px-4 ">
+						<header className=" text-base md:text-xl font-bold text-white bg-black/50 rounded-xl  p-4 ">
 							{header}
 						</header>
-						<main className="text-xl font-semibold md:text-[1vw] py-10 flex-1  ">
+						<main className="text-base font-normal md:text-[1vw] py-10 flex-1  ">
 							{main}
 						</main>
 					</aside>

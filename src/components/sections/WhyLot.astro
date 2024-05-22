@@ -5,14 +5,13 @@ import Container from "../../components/Container.astro";
 
 <Layout title="¿Por qué Lot Arquitectos?">
 	<Container>
-		<section
-			class=" flex flex-col items-center justify-center relative">
+		<section class="flex flex-col items-center justify-center relative">
 			<article class="w-full mt-20 md:py-20">
-				<h1
-					class="text-white text-center text-4xl lg:text-[5.5vw] font-black py-20 drop-shadow-md"
+				<h3
+					class="text-white text-center text-4xl lg:text-[5vw] font-black py-20 drop-shadow-md"
 					id="why-lot">
 					¿Por qué Lot Arquitectos?
-				</h1>
+				</h3>
 			</article>
 			<div class="text-black p-7 md:p-20 bg-white rounded-b-3xl">
 				<p
@@ -38,6 +37,19 @@ import Container from "../../components/Container.astro";
 </span> -->
 
 <style>
+	section {
+		animation: reveal2 linear both;
+		animation-timeline: view();
+		animation-range: entry 10% cover 30%;
+	}
+	@keyframes reveal2 {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+			scale: 0.8;
+		}
+	}
+
 	article {
 		position: relative;
 		background-image: url("../../img/home-4.jpg");

@@ -18,87 +18,84 @@ const HOME1 = {
 const { title1, date1, construction1, description1 } = HOME1;
 ---
 
-<Layout title="Inmersión en Lot Arquitectos">
-	<section
-		class="h-full w-full text-center relative"
-		data-header-color="black"
-		id="inmersion">
-		<Container>
-			<h1
-				class="text-white text-center text-4xl lg:text-[5.5vw] font-black drop-shadow-md"
-				id="inmersion">
-				Sumergite en Lot Arquitectos{" "}
-			</h1>
-			<div
-				class="flex flex-col md:flex-row justify-evenly items-center gap-10 md:gap-0 my-10 md:my-0 flex-wrap">
-				<article
-					class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm">
-					<Image
-						src={photo1}
-						alt="house picture"
-						class="rounded-2xl aspect-video"
-					/>
-					<h3
-						class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
-						{title1}
-					</h3><div class="mt-3">{date1}</div><div class="mt-4">
-						<div
-							class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
-							style="background:#f0f0f0;color:#000">
-							{construction1}
-						</div>
-					</div><div class="font-light text-gf3 mt-5 pb-5">
-						{description1}
+<section
+	class="h-full w-full text-center relative py-20"
+	data-header-color="black"
+	id="inmersion">
+	<Container>
+		<h3
+			class="text-white text-center text-4xl lg:text-[5vw] font-black drop-shadow-md"
+			id="inmersion">
+			Nuestros proyectos
+		</h3>
+		<div
+			class="flex flex-col md:flex-row justify-evenly items-center gap-10 md:gap-0 my-10 md:my-0 flex-wrap">
+			<article
+				class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm">
+				<Image
+					src={photo1}
+					alt="house picture"
+					class="rounded-2xl aspect-video"
+				/>
+				<h3
+					class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
+					{title1}
+				</h3><div class="mt-3">{date1}</div><div class="mt-4">
+					<div
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
+						style="background:#f0f0f0;color:#000">
+						{construction1}
 					</div>
-				</article>
+				</div><div class="font-light text-gf3 mt-5 pb-5">
+					{description1}
+				</div>
+			</article>
 
-				<article
-					class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[10rem]">
-					<BlurVideo client:visible />
-					<h3
-						class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
-						{title1}
-					</h3><div class="mt-3">{date1}</div><div class="mt-4">
-						<div
-							class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
-							style="background:#f0f0f0;color:#000">
-							{construction1}
-						</div>
-					</div><div class="font-light text-gf3 mt-5 pb-5">
-						{description1}
+			<article
+				class="flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[10rem]">
+				<BlurVideo client:visible />
+				<h3
+					class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
+					{title1}
+				</h3><div class="mt-3">{date1}</div><div class="mt-4">
+					<div
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
+						style="background:#f0f0f0;color:#000">
+						{construction1}
 					</div>
-				</article>
+				</div><div class="font-light text-gf3 mt-5 pb-5">
+					{description1}
+				</div>
+			</article>
 
-				<article
-					class="-z-10 flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[20rem]">
-					<Image
-						src={photo2}
-						alt="house picture"
-						class="rounded-2xl aspect-video"
-					/>
-					<h3
-						class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
-						{title1}
-					</h3><div class="mt-3">{date1}</div><div class="mt-4">
-						<div
-							class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
-							style="background:#f0f0f0;color:#000">
-							{construction1}
-						</div>
-					</div><div class="font-light text-gf3 mt-5 pb-5">
-						{description1}
+			<article
+				class="-z-10 flex flex-col items-start justify-start text-start bg-black/10 w-full max-w-[400px] p-5 rounded-3xl shadow-md h-fit backdrop-blur-sm md:mt-[20rem]">
+				<Image
+					src={photo2}
+					alt="house picture"
+					class="rounded-2xl aspect-video"
+				/>
+				<h3
+					class="text-gh3 pt-2 pb-1 font-[800] tracking-tight bg-clip-text">
+					{title1}
+				</h3><div class="mt-3">{date1}</div><div class="mt-4">
+					<div
+						class="inline-block rounded-md px-3 py-2 uppercase tracking-widest text-xs font-semibold"
+						style="background:#f0f0f0;color:#000">
+						{construction1}
 					</div>
-				</article>
-			</div>
-			<Image
-				class="top-0 left-0 h-full w-full object-cover -z-10 opacity-5 absolute"
-				src={img}
-				alt="Image of a house in the woods"
-			/>
-		</Container>
-	</section>
-</Layout>
-
+				</div><div class="font-light text-gf3 mt-5 pb-5">
+					{description1}
+				</div>
+			</article>
+		</div>
+		<Image
+			class="top-0 left-0 h-full w-full object-cover -z-10 opacity-5 absolute"
+			src={img}
+			alt="Image of a house in the woods"
+		/>
+	</Container>
+</section>
 <style>
 	article {
 		animation: reveal linear both;
