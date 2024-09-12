@@ -7,40 +7,46 @@ import "./SwiperHome.css";
 
 import arrowLeft from "../../icons/arrowLeft.svg";
 import arrowRight from "../../icons/arrowRight.svg";
-import home1 from "../../img/home-1.jpg";
-import home2 from "../../img/home-2.jpg";
-import home3 from "../../img/home-3.jpg";
-import home4 from "../../img/home-4.jpg";
+import home1 from "../../img/farmApp.jpg";
+import home2 from "../../img/orange.avif";
+import home3 from "../../img/cow2.jpg";
+import home4 from "../../img/farm3.webp";
+
+import banner1 from "../../img/platform1_test.png";
 
 export function SwiperHome() {
 	const images = [
 		{
-			title: "Arquitectura moderna",
-			subtitle: "Simplicidad y elegancia",
+			title: "Más que un Software",
+			subtitle: "La puerta al futuro de la industria agrícola.",
 			anchor: "Ver el proyecto",
-			href: "/home1",
+			href: "/www.cacta.eco",
 			img: home1,
+			img2: banner1,
 		},
 		{
-			title: "Lujo de primera clase",
-			subtitle: "Vive como una estrella de rock",
+			title: "Performance por KPI",
+			subtitle: "La App que te ayuda a mejorar tu rendimiento.",
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home2,
+			img2: banner1,
 		},
 		{
-			title: "Vive tu vida al máximo",
-			subtitle: "Y disfruta de la naturaleza",
+			title: "Análisis y gestión",
+			subtitle: "Aumenta la productividad de tu ganado.",
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home3,
+			img2: banner1,
 		},
 		{
-			title: "Elige lo mejor",
-			subtitle: "La oportunidad de vivir de ensueño",
+			title: "Reportes EPD",
+			subtitle: "Activa tu cadena de valor y posiciona tu producto",
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home4,
+			img2: banner1,
 		},
 	];
 
@@ -60,17 +66,17 @@ export function SwiperHome() {
 			className="mySwiper rounded-b-3xl ">
 			{images.map((image, index) => (
 				<SwiperSlide key={index} className="">
-					<div className="home relative hover:cursor-grab  ">
-						<aside className="absolute  mx-auto z-20 h-full w-full flex items-end md:items-center justify-center md:justify-between  opacity-20 ">
+					<div className="home relative  ">
+						<aside className="absolute  mx-auto z-30 h-full w-full flex items-end md:items-center justify-center md:justify-between  opacity-25 ">
 							<img
 								src={arrowLeft.src}
 								alt="arrow left"
-								className="w-20 "
+								className="w-25 "
 							/>
 							<img
 								src={arrowRight.src}
 								alt="arrow right"
-								className="w-20 "
+								className="w-25 "
 							/>
 						</aside>
 
@@ -82,32 +88,40 @@ export function SwiperHome() {
 						</span>
 
 						<span className="swiper-pagination absolute m-auto" />
-						<div className="home-swiper relative z-10">
+						<div className="home-swiper relative z-20">
 							<div>
 								<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[10rem] ">
 									<div
-										className="home-data flex flex-col items-center md:items-start text-start z-10 gap-10"
+										className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-10"
 										data-swiper-parallax="500">
-										<h3 className="home-subtitle text-white font-bold text-xl lg:text-[2vw] ">
-											{image.subtitle}
-										</h3>
 										<h1
-											className="home-title text-white text-4xl lg:text-[4vw] max-w-[15ch] leading-none font-black text-center md:text-left"
+											className="home-title bg-gradient-to-r from-white via-[#c684ff]  to-[#8e33ff] text-transparent bg-clip-text text-4xl lg:text-[5vw] max-w-[12ch] leading-none tracking-tight font-black text-center md:text-left drop-shadow-md py-4"
 											data-swiper-parallax="400">
 											{image.title}
 										</h1>
-										<a
+										<h3 className="home-subtitle text-white font-bold text-xl lg:text-[2vw] max-w-[25ch] leading-10  ">
+											{image.subtitle}
+										</h3>
+										{/* <a
 											data-swiper-parallax="300"
 											href={image.href}
-											className="home-button flex items-center justify-center text-white gap-1 mt-5 group">
+											target="_blank"
+											className="home-button flex items-center justify-center text-white gap-1 mt-5 group z-40">
 											{image.anchor}
-										</a>
+										</a> */}
 									</div>
 									<img
 										data-swiper-parallax="-300"
 										src={image.img.src}
 										alt={`${image.img} image`}
 										className="absolute top-0 left-0 w-full h-full object-cover object-center -z-10"
+									/>
+									<img
+										data-swiper-parallax="-200"
+										id="img2"
+										src={image.img2.src}
+										alt={`${image.img2} image`}
+										className="absolute  -bottom-[8rem] m-auto -right-[25rem] object-contain  rounded-3xl -z-10 opacity-85"
 									/>
 								</article>
 							</div>
