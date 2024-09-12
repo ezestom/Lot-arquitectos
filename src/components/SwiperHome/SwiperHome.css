@@ -2,7 +2,6 @@
 	position: relative;
 	border-radius: 3rem; /* Para asegurar que el contenedor sea circular */
 	object-fit: cover;
-	max-width: 85%;
 	/* Fondo con gradiente radial desde transparente hacia blanco */
 	background: radial-gradient(
 		circle,
