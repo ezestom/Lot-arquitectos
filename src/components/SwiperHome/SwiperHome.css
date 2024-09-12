@@ -1,21 +1,20 @@
 #img2 {
 	position: relative;
-	border-radius: 3rem; /* Para asegurar que el contenedor sea circular */
 	object-fit: cover;
 	/* Fondo con gradiente radial desde transparente hacia blanco */
 	background: radial-gradient(
 		circle,
-		rgba(255, 255, 255, 0) 50%,
-		/* Transparente desde el centro hasta el 60% */ rgba(255, 255, 255, .75)
-			100% /* Blanco desde el 60% hasta el borde */
+		rgba(142, 51, 255, 0.75) 35%,
+		/* Transparente desde el centro hasta el 60% */
+			rgba(255, 255, 255, 0.75) 100%
+			/* Blanco desde el 60% hasta el borde */
 	);
-	padding: 1.75rem; /* Ajusta el padding si es necesario */
 }
 .home:hover {
 	cursor: url("../../icons/hand.svg"), pointer;
 }
 
-@media (width > 1000px) {
+/* @media (width > 1000px) {
 	@keyframes fade-away {
 		to {
 			opacity: 0;
@@ -30,4 +29,4 @@
 		animation-timeline: --scroll;
 		animation-range: exit 25% exit 75%;
 	}
-}
+} */

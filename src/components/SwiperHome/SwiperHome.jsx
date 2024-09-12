@@ -13,6 +13,9 @@ import home3 from "../../img/cow2.jpg";
 import home4 from "../../img/farm3.webp";
 
 import banner1 from "../../img/platform1_test.png";
+import banner2 from "../../img/platform2_test.png";
+import banner3 from "../../img/platform3_test.png";
+import banner4 from "../../img/platform4_test.png";
 
 export function SwiperHome() {
 	const images = [
@@ -30,7 +33,7 @@ export function SwiperHome() {
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home2,
-			img2: banner1,
+			img2: banner2,
 		},
 		{
 			title: "Análisis y gestión",
@@ -38,7 +41,7 @@ export function SwiperHome() {
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home3,
-			img2: banner1,
+			img2: banner3,
 		},
 		{
 			title: "Reportes EPD",
@@ -46,7 +49,7 @@ export function SwiperHome() {
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home4,
-			img2: banner1,
+			img2: banner4,
 		},
 	];
 
@@ -63,7 +66,7 @@ export function SwiperHome() {
 				el: ".swiper-pagination",
 			}}
 			modules={[FreeMode, Pagination]}
-			className="mySwiper rounded-b-3xl ">
+			className="mySwiper rounded-b-3xl  ">
 			{images.map((image, index) => (
 				<SwiperSlide key={index} className="">
 					<div className="home relative  ">
@@ -95,11 +98,11 @@ export function SwiperHome() {
 										className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-10"
 										data-swiper-parallax="500">
 										<h1
-											className="home-title bg-gradient-to-r from-white via-[#c684ff]  to-[#8e33ff] text-transparent bg-clip-text text-6xl lg:text-[5vw] max-w-[12ch] leading-none tracking-tight font-black text-center md:text-left drop-shadow-md py-4"
+											className="home-title bg-gradient-to-r from-white via-[#c684ff]  to-[#8e33ff] text-transparent bg-clip-text text-6xl lg:text-[5vw] max-w-[12ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4"
 											data-swiper-parallax="400">
 											{image.title}
 										</h1>
-										<h3 className="home-subtitle text-white font-bold text-2xl lg:text-[2vw] max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight ">
+										<h3 className="home-subtitle text-white font-bold text-3xl lg:text-[2vw] max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight ">
 											{image.subtitle}
 										</h3>
 										{/* <a
@@ -121,7 +124,7 @@ export function SwiperHome() {
 										id="img2"
 										src={image.img2.src}
 										alt={`${image.img2} image`}
-										className="absolute w-full -bottom-[15rem] sm:-bottom-[12rem]  m-auto sm:-right-[40rem] object-contain  rounded-3xl -z-10 opacity-85"
+										className="absolute w-full -bottom-[15rem] sm:-bottom-[7.5rem]  m-auto sm:-right-[35rem] object-contain  sm:rounded-[3rem] -z-10 opacity-85 sm:p-7 shadow-md "
 									/>
 								</article>
 							</div>
