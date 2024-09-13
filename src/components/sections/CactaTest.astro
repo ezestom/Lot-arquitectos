@@ -1,0 +1,71 @@
+---
+import Container from "../Container.astro";
+import CardParallax from "../CardParallax/CardPallax.jsx";
+---
+
+<div id="solution" class="pt-10 lg:pt-32">
+	<Container>
+		<section class="flex flex-wrap justify-between ">
+			<div class="w-full md:w-1/2">
+				<h2
+					class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+					Solución
+				</h2>
+				<p
+					class="my-2 text-gray-600 dark:text-gray-300 text-md md:text-xl font-semibold">
+					Gestionar la sustentabilidad nunca fue tan fácil.
+				</p>
+				<p class="my-2 text-gray-600 dark:text-gray-300">
+					Alcanza tus objetivos sin complicaciones. Recopila y analiza
+					tus datos de forma automática, y sencilla.
+				</p>
+				<div
+					class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+					<div class="mt-8 flex gap-4 md:items-start">
+						<div class="flex gap-4 text-green-600">✓</div>
+						<div class="w-5/6">
+							<h3
+								class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+								Monitoreo por establecimiento
+							</h3>
+							<p class="text-gray-500 dark:text-gray-400">
+								Asegura un control completo de las operaciones,
+								recursos y rendimientos en cada campo. Asimismo,
+								localiza de manera sencilla los impactos
+								georeferenciados, lo que agiliza la respuesta
+								para ajustar las soluciones y estrategias con
+								mayor precisión. Incorpora el análisis de suelos
+								para obtener indicadores locales confiables.
+							</p>
+						</div>
+					</div>
+					<div class="pt-4 flex gap-4 md:items-start">
+						<div class="flex gap-4 text-green-600">✓</div>
+						<div class="w-5/6">
+							<h3
+								class="font-semibold text-lg text-gray-700 dark:text-teal-300">
+								Monitoreo por producto
+							</h3>
+							<p class="text-gray-500 dark:text-gray-400">
+								Adquiere trazabilidad del uso de recursos y
+								generación de emisiones asociadas a tus
+								actividades. Identifica oportunidades de mejora
+								de eficiencia y sustentabilidad.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<CardParallax client:visible />
+
+			<!-- aqui -->
+		</section>
+	</Container>
+</div>
+
+<style>
+   p {
+      font-size: 1rem;
+      color: #333;
+   }
+</style>
