@@ -10,23 +10,8 @@
 			/* Blanco desde el 60% hasta el borde */
 	);
 }
+
 .home:hover {
 	cursor: url("../../icons/hand.svg"), pointer;
 }
 
-/* @media (width > 1000px) {
-	@keyframes fade-away {
-		to {
-			opacity: 0;
-		}
-	}
-	.mySwiper {
-		view-timeline: --scroll;
-	}
-
-	.mySwiper {
-		animation: fade-away both linear;
-		animation-timeline: --scroll;
-		animation-range: exit 25% exit 75%;
-	}
-} */

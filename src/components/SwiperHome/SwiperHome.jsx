@@ -93,7 +93,7 @@ export function SwiperHome() {
 						<span className="swiper-pagination absolute m-auto" />
 						<div className="home-swiper relative z-20">
 							<div>
-								<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[10rem] ">
+								<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[10rem]">
 									<div
 										className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-10"
 										data-swiper-parallax="500">
