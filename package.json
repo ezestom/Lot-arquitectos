@@ -19,6 +19,7 @@
     "astro": "^4.7.0",
     "photoswipe": "^5.4.3",
     "react": "^18.3.1",
+    "react-chatbotify": "^2.0.0-beta.12",
     "react-dom": "^18.3.1",
     "sonner": "^1.4.41",
     "swiper": "^11.1.1",
