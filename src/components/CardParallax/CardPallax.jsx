@@ -23,7 +23,7 @@ const CardParallax = () => {
 			const percentX = (mouseX - centerX) / (myPanel.clientWidth / 2);
 			const percentY = -((mouseY - centerY) / (myPanel.clientHeight / 2));
 
-			subpanel.style.transform = `perspective(400px) rotateY(${
+			subpanel.style.transform = `perspective(500px) rotateY(${
 				percentX * transformAmount
 			}deg) rotateX(${percentY * transformAmount}deg)`;
 		};
@@ -60,10 +60,10 @@ const CardParallax = () => {
 		<div className="main md:pt-0 pt-28">
 			<div className="main-inner" id="panel" ref={panelRef}>
 				<div
-					className="main-box"
+					className="main-box group"
 					id="panel-container"
 					ref={containerRef}>
-					<div className="img">
+					<div className="img group-hover:scale-105 transition-all group-hover:drop-shadow-md group-hover:translate-y-2">
 						<img src={declaraciones.src} alt="Wizard-info" />
 					</div>
 					<div className="title">
