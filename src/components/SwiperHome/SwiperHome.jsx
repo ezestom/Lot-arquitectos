@@ -100,11 +100,11 @@ export function SwiperHome() {
 										className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-10"
 										data-swiper-parallax="500">
 										<h1
-											className="home-title bg-gradient-to-r from-white via-[#c684ff]  to-[#8e33ff] text-transparent bg-clip-text text-6xl lg:text-[5vw] max-w-[12ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4"
+											className="home-title bg-gradient-to-r from-white via-[#c684ff]  to-[#8e33ff] px-1 text-transparent bg-clip-text text-[4.25rem] lg:text-[5vw] max-w-[12ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4"
 											data-swiper-parallax="400">
 											{image.title}
 										</h1>
-										<h3 className="home-subtitle text-white font-bold text-3xl lg:text-[2vw] max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight ">
+										<h3 className="home-subtitle text-white font-bold text-3xl lg:text-[2vw] max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md ">
 											{image.subtitle}
 										</h3>
 										{/* <a
@@ -126,7 +126,7 @@ export function SwiperHome() {
 										id="img2"
 										src={image.img2.src}
 										alt={`${image.img2} image`}
-										className="absolute w-full -bottom-[15rem] sm:-bottom-[7.5rem]  m-auto sm:-right-[35rem] object-contain  sm:rounded-[3rem] -z-10 opacity-85 sm:p-7 shadow-md "
+										className="absolute sm:block hidden w-full sm:h-auto -bottom-[7.5rem]  m-auto sm:-right-[35rem] object-contain  sm:rounded-[3rem] -z-10 opacity-85 sm:p-7 shadow-md "
 									/>
 								</article>
 							</div>
