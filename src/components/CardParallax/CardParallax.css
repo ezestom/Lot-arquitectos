@@ -13,7 +13,8 @@
 	justify-content: center;
 	max-width: 500px;
 	border-radius: 20px;
-	padding: 20px;
+	padding: 2.5rem;
+	text-wrap: pretty;
 	box-shadow: 0px 0px 10px #d3d3d3;
 	transition: all 0.3s ease;
 	animation-delay: 0.5s;

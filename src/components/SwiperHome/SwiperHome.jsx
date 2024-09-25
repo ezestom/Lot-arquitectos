@@ -28,16 +28,17 @@ export function SwiperHome() {
 			img2: banner1,
 		},
 		{
-			title: "Performance por KPI",
-			subtitle: "La App que te ayuda a mejorar tu rendimiento.",
+			title: "Eco Score",
+			subtitle: "Engloba el impacto ambiental de tu empresa.",
 			anchor: "Ver el proyecto",
-			href: "/home1",
+			href: "/epd-reports",
 			img: home2,
 			img2: banner2,
 		},
 		{
 			title: "Análisis y gestión",
-			subtitle: "Aumenta la productividad de tu ganado.",
+			subtitle:
+				"Indicadores de impacto en la contribución de cada actor en tu cadena de valor.",
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home3,
@@ -45,7 +46,8 @@ export function SwiperHome() {
 		},
 		{
 			title: "Reportes EPD",
-			subtitle: "Activa tu cadena de valor y posiciona tu producto",
+			subtitle:
+				"Proporcionan información detallada sobre el ciclo de vida ambiental de tu actividad.",
 			anchor: "Ver el proyecto",
 			href: "/home1",
 			img: home4,

@@ -67,20 +67,24 @@ const CardParallax = () => {
 						<img src={declaraciones.src} alt="Wizard-info" />
 					</div>
 					<div className="title">
-						<h2>Cacta </h2>
+						<h2>
+							Logra la trazabilidad de tus negocios en solo unos
+							clics.
+						</h2>
 					</div>
 					<div className="text">
 						<p>
-							Alcanza tus objetivos sin complicaciones. Recopila y
-							analiza tus datos de forma automática, y sencilla.
-							Encuentra la información que necesitas en un solo
-							lugar.
-						</p>
-						<p>
-							Alcanza tus objetivos sin complicaciones. Recopila y
-							analiza tus datos de forma automática, y sencilla.
-							Encuentra la información que necesitas en un solo
-							lugar.
+							Simplifica el proceso de alcanzar tus objetivos.
+							Cacta recopila y analiza automáticamente tus datos,
+							facilitando la medición de tu progreso. Accede a
+							información clave para tomar decisiones informadas
+							que impulsen el crecimiento de tu negocio.
+							<strong>
+								{" "}
+								<br />
+								Cacta te da el control para hacer crecer tu
+								negocio de manera sostenible.
+							</strong>
 						</p>
 					</div>
 				</div>
