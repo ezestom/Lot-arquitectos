@@ -1,17 +1,13 @@
 ---
 import Header from "../../components/Header.astro";
-import SocialLinks from "../SocialLinks.astro";
 import { SwiperHome } from "../SwiperHome/SwiperHome.jsx";
 ---
 
-<header class="">
+<header class="relative">
 	<iframe
-		class="absolute bottom-0 right-0 z-10"
+		class="absolute bottom-0 right-0 z-50 w-[400px] h-[575px]"
 		src="https://chatbot-beta-silk.vercel.app/"
-		width="400"
-		height="570"
-		frameborder="0"
-		allowfullscreen>
+		frameborder="0">
 	</iframe>
 	<Header />
 	<SwiperHome client:load />
