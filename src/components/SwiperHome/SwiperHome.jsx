@@ -76,12 +76,12 @@ export function SwiperHome() {
 							<img
 								src={arrowLeft.src}
 								alt="arrow left"
-								className="w-25 "
+								className="w-25 sm:block hidden"
 							/>
 							<img
 								src={arrowRight.src}
 								alt="arrow right"
-								className="w-25 "
+								className="w-25 sm:block hidden"
 							/>
 						</aside>
 
