@@ -10,8 +10,3 @@
 			/* Blanco desde el 60% hasta el borde */
 	);
 }
-
-.home:hover {
-	cursor: url("../../icons/hand.svg"), pointer;
-}
-

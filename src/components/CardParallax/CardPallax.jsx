@@ -67,8 +67,8 @@ const CardParallax = () => {
 						<img src={declaraciones.src} alt="Wizard-info" />
 					</div>
 					<div className="title">
-						<h2>
-							Logra la trazabilidad de tus negocios en solo unos
+						<h2 className="font-semibold opacity-75">
+							Logra la trazabilidad de tus negocios en unos
 							clics.
 						</h2>
 					</div>
