@@ -141,17 +141,18 @@ export function SwiperHome() {
 									</button>
 								</aside> */}
 								<div
-									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance"
+									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 sm:w-1/3"
 									data-swiper-parallax="500">
 									<h1
-										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] lg:text-[3.5vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4"
+										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] lg:text-[3.5vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
 										data-swiper-parallax="400">
 										{image.title}
 									</h1>
 									<h3 className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] p-1 text-transparent bg-clip-text font-black text-3xl lg:text-4xl max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md ">
 										{image.subtitle}
 									</h3>
-									<p className="home-subtitle text-white font-bold text-xl lg:text-2xl max-w-[45ch]  text-center sm:text-start tracking-tight drop-shadow-md  ">
+									<hr />
+									<p className="home-subtitle text-white font-bold text-xl lg:text-2xl max-w-[40ch]  text-center sm:text-start tracking-tight drop-shadow-md  ">
 										{image.paragraph}
 									</p>
 								</div>
@@ -159,7 +160,7 @@ export function SwiperHome() {
 									data-swiper-parallax="-300"
 									src={image.img.src}
 									alt={`${image.img} image`}
-									className="absolute top-0 left-0 w-full h-full object-cover object-center -z-10 brightness-75"
+									className="absolute top-0 left-0 w-full h-full object-cover object-center -z-10 brightness-[.85] blur-sm"
 								/>
 								<img
 									data-swiper-parallax="-200"

@@ -67,23 +67,25 @@ const CardParallax = () => {
 						<img src={declaraciones.src} alt="Wizard-info" />
 					</div>
 					<div className="title">
-						<h2 className="font-semibold opacity-75">
-							Logra la trazabilidad de tus negocios en unos
-							clics.
+						<h2 className="font-bold opacity-75 text-2xl tracking-tighter ">
+							Nuestro software incluye Declaraciones Ambientales
+							de Producto
 						</h2>
 					</div>
 					<div className="text">
 						<p>
-							Simplifica el proceso de alcanzar tus objetivos.
-							Cacta recopila y analiza automáticamente tus datos,
-							facilitando la medición de tu progreso. Accede a
-							información clave para tomar decisiones informadas
-							que impulsen el crecimiento de tu negocio.
+							Muestra el impacto ambiental de un material en todo
+							su ciclo de vida, desde la extracción hasta la
+							manufactura. Esto te permite tomar decisiones más
+							informadas, optimizar procesos y comunicar de manera
+							transparente el desempeño ambiental de tus
+							productos.
 							<strong>
 								{" "}
 								<br />
-								Cacta te da el control para hacer crecer tu
-								negocio de manera sostenible.
+								Con la declaración ambiental , no solo cumples
+								con regulaciones, sino que también avanzas hacia
+								una producción más sostenible y eficiente.
 							</strong>
 						</p>
 					</div>
