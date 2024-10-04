@@ -90,7 +90,7 @@ export function SwiperHome() {
 	return (
 		<Swiper
 			ref={swiperRef} // Asignar la referencia
-			speed={1500}
+			speed={1000}
 			autoplay={{
 				delay: 3500,
 				disableOnInteraction: false,
@@ -112,7 +112,7 @@ export function SwiperHome() {
 						</span>
 						<span className="swiper-pagination absolute m-auto" />
 						<div className="home-swiper relative z-20">
-							<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[10rem]">
+							<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[6rem]">
 								{/* Botones de navegación */}
 								{/* <aside className="absolute right-0 h-fit w-full bottom-0 sm:bottom-auto  m-auto flex justify-between z-[100]">
 									<button
@@ -141,18 +141,18 @@ export function SwiperHome() {
 									</button>
 								</aside> */}
 								<div
-									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 sm:w-1/3"
+									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 md:max-w-[40ch] xl:max-w-[55ch] md:top-1/2 md:transform md:-translate-y-1/2"
 									data-swiper-parallax="500">
 									<h1
-										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] lg:text-[3.5vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
+										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] md:text-[3.5vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
 										data-swiper-parallax="400">
 										{image.title}
 									</h1>
-									<h3 className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] p-1 text-transparent bg-clip-text font-black text-3xl lg:text-4xl max-w-[25ch] sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md ">
+									<h3 className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] p-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl  sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md ">
 										{image.subtitle}
 									</h3>
 									<hr />
-									<p className="home-subtitle text-white font-bold text-xl lg:text-2xl max-w-[40ch]  text-center sm:text-start tracking-tight drop-shadow-md  ">
+									<p className="home-subtitle text-white font-bold text-xl md:text-2xl max-w-[40ch]  text-center md:text-start tracking-tight drop-shadow-md  ">
 										{image.paragraph}
 									</p>
 								</div>
@@ -167,7 +167,7 @@ export function SwiperHome() {
 									id="img2"
 									src={image.img2.src}
 									alt={`${image.img2} image`}
-									className="absolute sm:block hidden w-full sm:h-auto -bottom-[7.5rem] m-auto sm:-right-[35rem] object-contain sm:rounded-[3rem] -z-10 opacity-85 sm:p-7 shadow-md"
+									className="absolute md:block hidden w-full sm:h-auto -bottom-[7.5rem] m-auto -right-[20rem] xl:-right-[35rem] object-cover sm:rounded-[3rem] -z-10 opacity-85 p-2 xl:p-5 shadow-md"
 								/>
 							</article>
 						</div>
