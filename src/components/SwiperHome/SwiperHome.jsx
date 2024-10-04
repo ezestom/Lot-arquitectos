@@ -141,10 +141,10 @@ export function SwiperHome() {
 									</button>
 								</aside> */}
 								<div
-									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 md:max-w-[40ch] xl:max-w-[55ch] md:top-1/2 md:transform md:-translate-y-1/2"
+									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 max-w-[40ch] lg:max-w-[60ch] md:top-1/2 md:transform md:-translate-y-1/2"
 									data-swiper-parallax="500">
 									<h1
-										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] md:text-[3.5vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
+										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] md:text-[4vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
 										data-swiper-parallax="400">
 										{image.title}
 									</h1>
@@ -162,13 +162,15 @@ export function SwiperHome() {
 									alt={`${image.img} image`}
 									className="absolute top-0 left-0 w-full h-full object-cover object-center -z-10 brightness-[.85] blur-sm"
 								/>
-								<img
-									data-swiper-parallax="-200"
-									id="img2"
-									src={image.img2.src}
-									alt={`${image.img2} image`}
-									className="absolute md:block hidden w-full sm:h-auto -bottom-[7.5rem] m-auto -right-[20rem] xl:-right-[35rem] object-cover sm:rounded-[3rem] -z-10 opacity-85 p-2 xl:p-5 shadow-md"
-								/>
+								<div className="book-container ">
+									<img
+										data-swiper-parallax="-200"
+										id="img2"
+										src={image.img2.src}
+										alt={`${image.img2} image`}
+										className="absolute md:block hidden  m-auto -right-[30rem]  object-cover sm:rounded-[3rem] -z-10 opacity-85  p-4 shadow-md book "
+									/>
+								</div>
 							</article>
 						</div>
 					</div>
