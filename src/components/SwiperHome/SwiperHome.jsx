@@ -168,7 +168,7 @@ export function SwiperHome() {
 										id="img2"
 										src={image.img2.src}
 										alt={`${image.img2} image`}
-										className="absolute md:block hidden  m-auto -right-[30rem]  object-cover sm:rounded-[3rem] -z-10 opacity-85  p-4 shadow-md book "
+										className="absolute md:block hidden  m-auto -right-[25rem]  object-cover sm:rounded-[3rem] -z-10 opacity-85  p-4 shadow-md book "
 									/>
 								</div>
 							</article>
