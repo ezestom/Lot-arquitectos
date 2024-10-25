@@ -1,0 +1,192 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import YoutubeShort from "./YoutubeShort.astro";
+import Icon from "../ui/Icon.astro";
+import Subtitle from "./Subtitle.astro";
+
+const YOUTUBE_SHORTS = [
+	{
+		videoId: "CkkZMo1NvpU",
+		thumbnailUrl: "/img/thumbnails/short1.png",
+		title: "Short Example 1",
+	},
+	{
+		videoId: "3JZ_D3ELwOQ",
+		thumbnailUrl: "/img/thumbnails/short1.png",
+		title: "Short Example 2",
+	},
+	{
+		videoId: "tVj0ZTS4WF4",
+		thumbnailUrl: "/img/thumbnails/short1.png",
+		title: "Short Example 3",
+	},
+	{
+		videoId: "dQw4w9WgXcQ",
+		thumbnailUrl: "/img/thumbnails/short1.png",
+		title: "Short Example 4",
+	},
+	{
+		videoId: "3JZ_D3ELwOQ",
+		thumbnailUrl: "/img/thumbnails/short1.png",
+		title: "Short Example 5",
+	},
+] as const;
+---
+
+<SectionContainer class="px-0 py-24">
+	<div class="flex items-center justify-between pb-6 md:pb-12">
+		<Subtitle class="!pb-0">Trabaja con los mejores</Subtitle>
+
+		<div class="hidden md:flex items-center gap-x-4">
+			<button
+				class="bg-[#E2E2E5] text-[#636365] opacity-45 p-1 rounded-full enabled:hover:scale-110 transition-all enabled:active:scale-100"
+				id="left-button2"
+				disabled="true"
+				aria-label="Ir al elemento anterior">
+				<Icon name="leftarrow" />
+			</button>
+			<button
+				class="bg-[#E2E2E5] text-[#636365] p-1 rounded-full enabled:hover:scale-110 transition-all enabled:active:scale-100"
+				id="right-button2"
+				aria-label="Ir al siguiente elemento">
+				<Icon name="rightarrow" />
+			</button>
+		</div>
+	</div>
+
+	<div
+		class="relative carousel-container2"
+		id="carousel-container2"
+		style="--left-opacity: 0; --right-opacity: 1;">
+		<div
+			class="flex overflow-scroll custom-scrollbar gap-x-4 md:gap-x-8 snap-mandatory snap-x"
+			id="carousel2">
+			{
+				YOUTUBE_SHORTS.map(({ videoId, thumbnailUrl, title }) => (
+					<YoutubeShort
+						videoId={videoId}
+						thumbnailUrl={thumbnailUrl}
+						title={title}
+					/>
+				))
+			}
+		</div>
+	</div>
+</SectionContainer>
+
+<style>
+	.custom-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.custom-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.carousel-container:before {
+		background-image: linear-gradient(to left, transparent, #cccc);
+		content: "";
+		height: 570px;
+		left: 0;
+		opacity: var(--left-opacity);
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+		width: 0.75rem;
+		z-index: 10;
+	}
+
+	.carousel-container:after {
+		background-image: linear-gradient(to right, transparent, #cccc);
+		content: "";
+		height: 570px;
+		opacity: var(--right-opacity);
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+		width: 0.75rem;
+		z-index: 10;
+	}
+
+	@media (max-width: 768px) {
+		.carousel-container:before {
+			opacity: 0 !important;
+		}
+
+		.carousel-container:after {
+			opacity: 0 !important;
+		}
+	}
+</style>
+
+<script>
+	const rightButton2 = document.querySelector(
+		"#right-button2"
+	) as HTMLButtonElement;
+	const leftButton2 = document.querySelector(
+		"#left-button2"
+	) as HTMLButtonElement;
+	const carousel2 = document.querySelector("#carousel2") as HTMLDivElement;
+	const carouselContainer2 = document.querySelector(
+		"#carousel-container2"
+	) as HTMLDivElement;
+
+	leftButton2.addEventListener("click", () => {
+		carousel2.scrollTo({
+			left: carousel2.scrollLeft - 320,
+			behavior: "smooth",
+		});
+		console.log("left");
+	});
+
+	rightButton2.addEventListener("click", () => {
+		carousel2.scrollTo({
+			left: carousel2.scrollLeft + 320,
+			behavior: "smooth",
+		});
+		console.log("right");
+	});
+
+	carousel2.addEventListener("scroll", () => {
+		const tolerance = 2; // 0 + 2px to account for floating point errors
+
+		const updateButtonState = (
+			button: HTMLButtonElement,
+			disable: boolean
+		) => {
+			button.classList.toggle("opacity-45", disable);
+			button.disabled = disable;
+		};
+
+		const updateOpacity = (property: string, value: string) => {
+			carouselContainer2.style.setProperty(property, value);
+		};
+
+		if (carousel2.scrollLeft <= tolerance) {
+			updateButtonState(leftButton2, true);
+		} else {
+			updateButtonState(leftButton2, false);
+		}
+
+		if (
+			carousel2.scrollLeft + carousel2.clientWidth >=
+			carousel2.scrollWidth - tolerance
+		) {
+			updateButtonState(rightButton2, true);
+			updateOpacity("--right-opacity", "0");
+		} else {
+			updateButtonState(rightButton2, false);
+			updateOpacity("--right-opacity", "1");
+		}
+
+		if (carousel2.scrollLeft > tolerance) {
+			updateOpacity("--left-opacity", "1");
+		} else {
+			updateOpacity("--left-opacity", "0");
+		}
+	});
+</script>

@@ -3,7 +3,7 @@ import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { Parallax, Pagination } from "swiper/modules";
 import "./SwiperHome.css";
 
 import arrowLeft from "../../icons/arrowLeft.svg";
@@ -89,23 +89,19 @@ export function SwiperHome() {
 
 	return (
 		<Swiper
-			ref={swiperRef} // Asignar la referencia
-			speed={1000}
-			autoplay={{
-				delay: 3500,
-				disableOnInteraction: false,
-			}}
+			ref={swiperRef}
 			loop={true}
+			speed={1000}
+			parallax={true}
 			spaceBetween={0}
-			allowTouchMove={false} // Desactivar el deslizamiento manual
 			pagination={{
 				clickable: true,
-				el: ".swiper-pagination",
 			}}
-			modules={[Autoplay, FreeMode, Pagination]}
-			className="mySwiper">
+			grabCursor={true}
+			modules={[Parallax, Pagination]}
+			className="mySwiper cursor-pointer">
 			{images.map((image, index) => (
-				<SwiperSlide key={index} className="">
+				<SwiperSlide key={index}>
 					<div className="home relative">
 						<span className="swiper-fraction absolute text-6xl top-0 right-0 px-12 md:px-5 font-black text-white z-20">
 							{(index + 1).toString().padStart(2, "0")}
@@ -114,13 +110,12 @@ export function SwiperHome() {
 						<div className="home-swiper relative z-20">
 							<article className="home-article relative w-full h-screen flex items-center justify-center md:justify-start md:pl-[6rem]">
 								{/* Botones de navegación */}
-								{/* <aside className="absolute right-0 h-fit w-full bottom-0 sm:bottom-auto  m-auto flex justify-between z-[100]">
+								<aside className="absolute right-0 h-fit w-full bottom-0 sm:bottom-auto  m-auto flex justify-between z-[100]">
 									<button
 										className="swiper-button-prev"
-										onClick={() => {
-											swiperRef.current.swiper.slidePrev(); // Usar referencia para cambiar el slide
-											swiperRef.current.swiper.autoplay.start(); // Reiniciar el autoplay
-										}}>
+										onClick={() =>
+											swiperRef.current.swiper.slidePrev()
+										}>
 										<img
 											src={arrowLeft.src}
 											alt="arrow left"
@@ -129,42 +124,43 @@ export function SwiperHome() {
 									</button>
 									<button
 										className="swiper-button-next"
-										onClick={() => {
-											swiperRef.current.swiper.slideNext(); // Usar referencia para cambiar el slide
-											swiperRef.current.swiper.autoplay.start(); // Reiniciar el autoplay
-										}}>
+										onClick={() =>
+											swiperRef.current.swiper.slideNext()
+										}>
 										<img
 											src={arrowRight.src}
 											alt="arrow right"
 											className="w-25 sm:block  opacity-75 px-1 text-transparent bg-clip-text hover:scale-105  active:scale-90 active:translate-x-5 transition"
 										/>
 									</button>
-								</aside> */}
-								<div
-									className="home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 max-w-[40ch] lg:max-w-[60ch] md:top-1/2 md:transform md:-translate-y-1/2"
-									data-swiper-parallax="500">
+								</aside>
+								<div className=" home-data absolute flex flex-col items-center md:items-start text-start z-10 gap-5 text-balance px-4 md:px-0 max-w-[40ch] lg:max-w-[60ch] md:top-1/2 md:transform md:-translate-y-1/2">
 									<h1
 										className="home-title bg-gradient-to-r from-white via-[#c684ff] to-[#8e33ff] px-1 text-transparent bg-clip-text text-[3.75rem] md:text-[4vw] max-w-[15ch] leading-none tracking-tight font-black text-center md:text-left -my-4 drop-shadow-md py-4 "
-										data-swiper-parallax="400">
+										data-swiper-parallax="-400">
 										{image.title}
 									</h1>
-									<h3 className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] p-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl  sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md ">
+									<h3
+										className="home-subtitle bg-gradient-to-r from-white  to-[#8e33ff] p-1 text-transparent bg-clip-text font-black text-3xl md:text-4xl  sm:leading-10 text-center sm:text-start tracking-tight drop-shadow-md "
+										data-swiper-parallax="-300">
 										{image.subtitle}
 									</h3>
 									<hr />
-									<p className="home-subtitle text-white font-bold text-xl md:text-2xl max-w-[40ch]  text-center md:text-start tracking-tight drop-shadow-md  ">
+									<p
+										className="home-subtitle text-white font-bold text-xl md:text-2xl max-w-[40ch]  text-center md:text-start tracking-tight drop-shadow-md  "
+										data-swiper-parallax="-200">
 										{image.paragraph}
 									</p>
 								</div>
 								<img
-									data-swiper-parallax="-300"
+									slot="container-start"
 									src={image.img.src}
 									alt={`${image.img} image`}
-									className="absolute top-0 left-0 w-full h-full object-cover object-center -z-10 brightness-[.85] blur-sm"
+									className="parallax-bg absolute top-0 left-0 w-full h-full object-cover object-center -z-10 brightness-[.85] blur-sm"
+									data-swiper-parallax="0%"
 								/>
 								<div className="book-container ">
 									<img
-										data-swiper-parallax="-200"
 										id="img2"
 										src={image.img2.src}
 										alt={`${image.img2} image`}
