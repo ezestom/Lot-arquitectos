@@ -14,6 +14,7 @@
     "@astrojs/react": "^3.3.1",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/montserrat-alternates": "^5.0.13",
+    "@midudev/tailwind-animations": "^0.1.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
